@@ -1,0 +1,631 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EXPLORE DIALOGEX 0, 0, 228, 142
+STYLE DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "File Browser"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Location:",IDC_STATIC,2,3,30,8
+    EDITTEXT        IDC_LOCATION,34,1,149,13,ES_AUTOHSCROLL | ES_WANTRETURN
+    CONTROL         "List1",IDC_FILELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | 
+                    LVS_AUTOARRANGE | LVS_EDITLABELS | WS_BORDER | 
+                    WS_TABSTOP,1,16,225,112
+    DEFPUSHBUTTON   "",IDC_GODIR,185,0,17,15,BS_ICON | BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "",IDC_GOUPDIR,205,0,17,15,BS_ICON | BS_CENTER | 
+                    BS_VCENTER
+END
+
+IDD_PROPERTIES DIALOG DISCARDABLE  0, 0, 220, 221
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,198,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,161,198,52,16
+    EDITTEXT        IDC_NAME,40,8,172,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_TYPE,52,48,160,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_LOCATION,52,64,160,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_FILESIZE,52,80,160,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_MSDOSNAME,64,112,148,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_CREATED,64,124,148,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    CONTROL         "Read-Only",IDC_ATTR_R,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,52,152,49,10
+    CONTROL         "Archive",IDC_ATTR_A,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,52,164,40,10
+    CONTROL         "Temporary",IDC_ATTR_T,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,52,176,49,10
+    CONTROL         "Hidden",IDC_ATTR_H,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,152,39,10
+    CONTROL         "Directory",IDC_ATTR_D,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,108,164,44,10
+    CONTROL         "System",IDC_ATTR_S,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,152,39,10
+    CONTROL         "Compressed",IDC_ATTR_C,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,156,164,55,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,32,208,1
+    ICON            "",IDC_FILEICON,8,4,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,104,207,1
+    LTEXT           "Type:",IDC_STATIC,8,48,19,8
+    LTEXT           "Location:",IDC_STATIC,8,64,30,8
+    LTEXT           "Size:",IDC_STATIC,8,80,16,8
+    LTEXT           "MS-DOS Name:",IDC_STATIC,8,112,52,8
+    LTEXT           "Created:",IDC_STATIC,8,124,28,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,144,205,1
+    LTEXT           "Attributes:",IDC_STATIC,8,152,32,8
+END
+
+IDD_TRANSFERPROPS DIALOG DISCARDABLE  0, 0, 179, 89
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Transfer Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_BINDINGSTRING,4,40,172,14,ES_AUTOHSCROLL
+    CONTROL         "Random Binding String",IDC_RANDOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,56,88,10
+    DEFPUSHBUTTON   "OK",IDOK,68,68,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,124,68,52,16
+    LTEXT           "Binding String:",IDC_BINDINGSTRINGTEXT,4,32,46,8
+    EDITTEXT        IDC_CONNECTSTRING,4,12,172,14,ES_AUTOHSCROLL
+    LTEXT           "Always connect to:",IDC_BINDINGSTRINGTEXT2,4,4,61,8
+END
+
+IDD_XFERDLG DIALOG DISCARDABLE  0, 0, 186, 105
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Transferring File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,128,84,52,16
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,8,64,172,14
+    EDITTEXT        IDC_BYTECOUNT,44,48,48,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    EDITTEXT        IDC_BYTETOTAL,108,48,48,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    EDITTEXT        IDC_DSTFILE,28,28,152,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_SRCFILE,28,8,152,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "From:",IDC_STATIC,4,8,18,8
+    LTEXT           "To:",IDC_STATIC,8,28,12,8
+    LTEXT           "Progress:",IDC_STATIC,9,50,30,8
+    LTEXT           "of",IDC_STATIC,96,49,8,8
+    LTEXT           "bytes",IDC_STATIC,160,49,18,8
+END
+
+IDD_REGEDIT DIALOG DISCARDABLE  0, 0, 290, 193
+STYLE DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Remote Registry"
+MENU IDR_REGEDITMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree1",IDC_REGTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | 
+                    TVS_DISABLEDRAGDROP | WS_BORDER,4,4,140,184
+    CONTROL         "List1",IDC_REGLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_EDITLABELS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,148,4,140,184
+END
+
+IDD_EDITSTRING DIALOG DISCARDABLE  0, 0, 236, 93
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit String"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,124,72,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,180,72,52,16
+    LTEXT           "Value &name:",IDC_STATIC,4,4,40,8
+    EDITTEXT        IDC_VALUENAME,4,16,228,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "&Value data:",IDC_STATIC,4,36,37,8
+    EDITTEXT        IDC_VALUEDATA,4,48,228,14,ES_AUTOHSCROLL
+END
+
+IDD_EDITDWORD DIALOG DISCARDABLE  0, 0, 204, 105
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit DWORD Value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_VALUEDATA,4,48,84,14,ES_AUTOHSCROLL
+    CONTROL         "&Hexadecimal",IDC_BASE_HEX,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,100,48,57,10
+    CONTROL         "&Decimal",IDC_BASE_DEC,"Button",BS_AUTORADIOBUTTON,100,
+                    60,41,10
+    DEFPUSHBUTTON   "OK",IDOK,92,84,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,148,84,52,16
+    EDITTEXT        IDC_VALUENAME,4,16,196,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Value &name:",IDC_STATIC,4,4,40,8
+    LTEXT           "&Value data:",IDC_STATIC,4,36,37,8
+    GROUPBOX        "Base",IDC_STATIC,92,36,108,40
+END
+
+IDD_EDITBINARY DIALOG DISCARDABLE  0, 0, 240, 181
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Binary Value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,128,160,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,184,160,52,16
+    EDITTEXT        IDC_VALUENAME,4,16,232,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Value &name:",-1,4,4,40,8
+    LTEXT           "&Value data:",-1,4,36,37,8
+    EDITTEXT        IDC_VALUEDATA,4,48,232,104,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+END
+
+IDD_NEWKEY DIALOG DISCARDABLE  0, 0, 180, 57
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Create New Key"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_KEYNAME,4,16,172,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,68,36,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,124,36,52,16
+    LTEXT           "&Key Name",-1,4,4,34,8
+END
+
+IDD_NEWVALUE DIALOG DISCARDABLE  0, 0, 180, 57
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Create New Value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_KEYNAME,4,16,172,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,68,36,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,124,36,52,16
+    LTEXT           "&Value Name",IDC_STATIC,4,4,40,8
+END
+
+IDD_SUCKYEDITBINARY DIALOG DISCARDABLE  0, 0, 236, 93
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Binary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,124,72,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,180,72,52,16
+    LTEXT           "Value &name:",IDC_STATIC,4,4,40,8
+    EDITTEXT        IDC_VALUENAME,4,16,228,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "&Value data:",IDC_STATIC,4,36,37,8
+    EDITTEXT        IDC_VALUEDATA,4,48,228,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EXPLORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_TRANSFERPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_XFERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_REGEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_EDITSTRING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_EDITDWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_EDITBINARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_NEWKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_NEWVALUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_SUCKYEDITBINARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_EXPLOREMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Folder",                 IDM_NEWFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete\tDel",                IDM_DELETE
+        MENUITEM "&Rename",                     IDM_RENAME
+        MENUITEM "Prop&erties",                 IDM_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Upload...",                  IDM_UPLOAD
+        MENUITEM "Download &Selected",          IDM_DOWNLOADSELECTED
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+F4",             IDM_CLOSE
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste \tCtrl+V",             ID_EDIT_PASTE
+        MENUITEM "Select &All",                 IDM_SELECTALL
+        MENUITEM "&Invert Selection",           IDM_INVERTSELECTION
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Lar&ge Icons",                IDM_VIEWLARGE
+        MENUITEM "S&mall Icons",                IDM_VIEWSMALL
+        MENUITEM "&List",                       IDM_VIEWLIST
+        MENUITEM "Details",                     IDM_VIEWDETAILS
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh",                    IDM_REFRESH
+        MENUITEM SEPARATOR
+        POPUP "Arrange Icons"
+        BEGIN
+            MENUITEM "by &Name",                    IDM_ARRANGENAME
+            MENUITEM "by &Type",                    IDM_ARRANGETYPE
+            MENUITEM "by &Size",                    IDM_ARRANGESIZE
+            MENUITEM "by &Date",                    IDM_ARRANGEDATE
+        END
+    END
+    POPUP "&Connect"
+    BEGIN
+        MENUITEM "Connect...",                  IDM_CONNECT
+        MENUITEM "Disconnect",                  IDM_DISCONNECT, GRAYED
+        MENUITEM "Transfer &Options...",        IDM_OPTIONS
+    END
+END
+
+IDR_EXPLOREPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "File Browser Popup"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Paste \tCtrl+V",             ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&New Folder",                 IDM_NEWFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete\tDel",                IDM_DELETE
+        MENUITEM "&Rename",                     IDM_RENAME
+        MENUITEM "Prop&erties",                 IDM_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Upload...",                  IDM_UPLOAD
+        MENUITEM "Download &Selected",          IDM_DOWNLOADSELECTED
+        MENUITEM SEPARATOR
+        POPUP "&View"
+        BEGIN
+            MENUITEM "Lar&ge Icons",                IDM_VIEWLARGE
+            MENUITEM "S&mall Icons",                IDM_VIEWSMALL
+            MENUITEM "&List",                       IDM_VIEWLIST
+            MENUITEM "Details",                     IDM_VIEWDETAILS
+            MENUITEM SEPARATOR
+            MENUITEM "&Refresh",                    IDM_REFRESH
+            MENUITEM SEPARATOR
+            POPUP "Arrange Icons"
+            BEGIN
+                MENUITEM "by &Name",                    IDM_ARRANGENAME
+                MENUITEM "by &Type",                    IDM_ARRANGETYPE
+                MENUITEM "by &Size",                    IDM_ARRANGESIZE
+                MENUITEM "by &Date",                    IDM_ARRANGEDATE
+            END
+        END
+        MENUITEM "&Refresh",                    IDM_REFRESH
+    END
+END
+
+IDR_REGEDITMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Registry"
+    BEGIN
+        MENUITEM "&Close",                      IDM_CLOSE
+    END
+    POPUP "&Edit"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&Key",                        IDM_NEW_KEY
+            MENUITEM SEPARATOR
+            MENUITEM "&String Value",               IDM_NEW_STRINGVALUE
+            MENUITEM "&Binary Value",               IDM_NEW_BINARYVALUE
+            MENUITEM "&DWORD Value",                IDM_NEW_DWORDVALUE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     IDM_DELETE_KEY
+        MENUITEM "&Rename",                     IDM_RENAME_KEY
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy Key Name",              IDM_COPYKEYNAME
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Refresh",                    ID_VIEW_REFRESH
+    END
+    POPUP "&Connect"
+    BEGIN
+        MENUITEM "Connect...",                  IDM_CONNECT
+        MENUITEM "Disconnect",                  IDM_DISCONNECT, GRAYED
+    END
+END
+
+IDR_REGKEYPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RegKeyPopup"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&Key",                        IDM_NEW_KEY
+            MENUITEM SEPARATOR
+            MENUITEM "&String Value",               IDM_NEW_STRINGVALUE
+            MENUITEM "&Binary Value",               IDM_NEW_BINARYVALUE
+            MENUITEM "&DWORD Value",                IDM_NEW_DWORDVALUE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     IDM_DELETE_KEY
+        MENUITEM "&Rename",                     IDM_RENAME_KEY
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy Key Name",              IDM_COPYKEYNAME
+    END
+END
+
+IDR_REGVALUEPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RegValuePopup"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&Key",                        IDM_NEW_KEY
+            MENUITEM SEPARATOR
+            MENUITEM "&String Value",               IDM_NEW_STRINGVALUE
+            MENUITEM "&Binary Value",               IDM_NEW_BINARYVALUE
+            MENUITEM "&DWORD Value",                IDM_NEW_DWORDVALUE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Modify",                      IDM_MODIFY_VALUE
+        MENUITEM "&Delete",                     IDM_DELETE_KEY
+        MENUITEM "&Rename",                     IDM_RENAME_KEY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GOUPDIR             ICON    DISCARDABLE     "icon1.ico"
+IDI_GODIR               ICON    DISCARDABLE     "goupdir1.ico"
+IDI_CDCFOLDER           ICON    DISCARDABLE     "ico00001.ico"
+IDI_CDCREG              ICON    DISCARDABLE     "cdcreg1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_REGIMGLIST          BITMAP  DISCARDABLE     "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAGPOINTER         CURSOR  DISCARDABLE     "arrow.cur"
+IDC_DRAGCOPYPOINTER     CURSOR  DISCARDABLE     "dragpoin.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_NEWFOLDER           "Create New Folder"
+    IDM_DELETE              "Delete File(s)"
+    IDM_RENAME              "Rename File"
+    IDM_PROPERTIES          "File Properties"
+    IDM_CLOSE               "Close"
+    IDM_SELECTALL           "Select all items"
+    IDM_CUT                 "Cut selection"
+    IDM_COPY                "Copy selection"
+    IDM_PASTE               "Paste selection"
+    IDM_INVERTSELECTION     "Invert selection"
+    IDM_VIEWLARGE           "Large icon view"
+    IDM_VIEWSMALL           "Small icons view"
+    IDM_VIEWLIST            "List view icons"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_DETAILS         "Detailed icon view"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_ARRANGENAME         "Sort items by name"
+    IDM_ARRANGETYPE         "Sort items by type"
+    IDM_ARRANGESIZE         "Sort items by size"
+    IDM_ARRANGEDATE         "Sort items by date"
+    IDM_CONNECT             "Connect to server"
+    IDM_OPTIONS             "Connection and transfer options"
+    IDM_REFRESH             "Refresh this window"
+    IDM_UPLOAD              "Upload a file to the remote system"
+    IDM_DOWNLOAD            "Download files from server."
+    IDM_DOWNLOADSELECTED    "Download selected files."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the selected items"
+    ID_EDIT_CUT             "Cut the selected items"
+    ID_EDIT_PASTE           "Paste the selected items"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_NEW_KEY         "Add a new key"
+    IDM_NEW_STRINGVALUE     "Add a new string value"
+    ID_EDIT_NEW_BINARYVALUE "Add a new binary value"
+    ID_EDIT_NEW_DWORDVALUE  "Add a new DWORD value"
+    IDM_NEW_KEY             "Create a new key"
+    IDM_DELETE_KEY          "Deletes the selection"
+    IDM_RENAME_KEY          "Renames the selection"
+    IDM_COPYKEYNAME         "Copies the full name of the selected key to the clipboard"
+    IDM_FIND                "Find a registry key"
+    IDM_NEW_BINARYVALUE     "Add a new binary value"
+    IDM_NEW_DWORDVALUE      "Add a new DWORD value"
+    IDM_MODIFY_VALUE        "Modify the selected value."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

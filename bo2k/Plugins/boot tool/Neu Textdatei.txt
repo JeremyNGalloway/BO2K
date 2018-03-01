@@ -1,0 +1,80 @@
+BOTOOL is a client-side plugin for Back Orifice 2000 that provides two functions:
+	* A remote filesystem browser with a familiar interface.
+        * A remote registry editor with a familiar interface.
+
+The remote filesystem browser provides functionality to encapsulate
+the normally complex and commonly used BO2K functions to:
+	* List files/directories
+        * Move files/directories
+        * Copy files/directories
+        * Rename files/directories
+        * Examine and modify file/directory attributes
+	* Transfer files from client to server and from server to client 
+          (upload/download) using a secure encrypted/authenticated channel.
+
+The remote registry browser provides the functionality to:
+	* List keys/values
+        * Add keys/values
+        * Modify values
+        * Delete keys/values
+        * Rename keys/values
+
+Installation
+------------
+
+	1. Copy the BOTOOL.DLL to a place where you won't forget about it.
+           The place where you installed the BO2K client is a good idea.
+
+        2. Run the BO2K client, go to the plugins menu and hit the configure option.
+           Insert the BOTOOL.DLL. You won't have to insert this plugin into the
+           BO2K server, since it uses only native BO2K commands and communication protocols.
+
+	3. Click on the BO Tools folder in the configuration panel and set up your command
+           channel net module/encryption/authentication options to the settings you use
+           most often to connect to BO2K servers (just like the server command client settings).
+           Set up the file transfer options to match those specified in the server's file transfer
+           settings. This will not matter too much, since the server can tell the client which
+           protocols to use.
+
+	4. Hit OK, go to the plugins menu and select the tool that you want to use and go
+           for it. For the network address, use the same address/port that you've always
+           used to connect to your server. Same encryption, same authentication.
+	
+
+Notes
+-----
+
+	These tools should be REALLY easy to understand. Pretty much everything has a 
+'right-click' menu. Upload and download may be confused if you are using TCPIO through
+an SSH tunnel. Here's how to do that, by the way:
+
+	SSH Tunneling for BO2K:
+
+	1. Set up 2 SSH tunnels between your client machine and your server machine.
+           One for the port you've got BO2K running on, and one on another random port.
+           If you don't know how to do this, don't ask me. Figure it out. Let's assume your
+           BO2K server is on port 10000, and you have a ssh tunnel from 
+           10000(local)->10000(remote), and your extra tunnel is on port 
+           13131(local)->13131(remote).
+        
+	2. Since you're connecting -through- the ssh tunnel, you'll point all your BO2K
+           server connections to 127.0.0.1:10000.
+	
+	3. When you're using the BOTOOL file transfer stuff (upload/download), you should
+           note that when the BOTOOL filebrowser client tells the server which file it wants
+           to download, the server picks a random port and tells the client where to connect.
+           It will tell the server to connect to it's ACTUAL_IP_ADDRESS:PORT. This would be
+           instructing the client to transfer the file without using the SSH tunnel.
+        
+        4. To enforce the tunnel, you have to tell the server to always use the same port,
+           in this case, 13131. And you have to tell the client, to always connect to
+           127.0.0.1:13131, since the server will be giving BOTOOL a different address,
+           and you want the filebrowser client to ignore that.
+
+	5. So, you can do this with the Connect/'Transfer Options' menu item in the BOTOOL 
+           filebrowser client. In this scenario, we would uncheck 'RANDOM BINDING STRING',
+           and set 'Always connect to:' to '127.0.0.1:13131'. We would set 'Binding String'
+           to '13131'. And there ya go. File transfer from Windows to Windows encrypted
+           via BO2K, reencrypted, authenticated and tunneled through SSH.
+
+

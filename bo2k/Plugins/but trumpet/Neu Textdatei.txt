@@ -1,0 +1,127 @@
+20/07/99 - Butt Trumpet 2000 - Int_13h  
+Description  
+
+This DLL (with source code) is a plugin for Back Orifice 2000. It duplicates the functionality of the original Butt Trumpet plugin for the original Back Orifice, plus adds some more. This plugin has been designed to send an email message to you, the administrator, after BO2K has been successfully installed on a client machine. It allows you to easily keep track of who is remotely administratable.
+
+________________
+
+Installation
+________________
+
+BT2K is structly a server side plugin. There is no client component. 
+To create a new server with BOred included perform the following steps:
+1) Run bo2kcfg.exe
+2) Create a bo2k server, following the BO2K directions (either using 
+the wizard, or directly with the configuration tool)
+3) Once you see the "BO2K Server Configuration" tool, you will need to click
+on "Open Server..."
+4) Select the server you have, typically "bo2k.exe"
+5) Click on "Insert..." under plugins
+6) Select "BT2K.dll"
+7) You will now see "Butt Trumpet 2000" in the plugins list
+8) Configure the server, as listed below.
+9) Select "Save Server"
+10)Exit
+The server is now ready to load on to a computer.
+
+
+
+Configuration
+____________
+
+
+Configuration is relatively easy. Under the ServerConfiguration
+utility, look at the "Option Variables" tree. Toward the bottom,
+you should see a folder for "Butt Trumpet 2000." In this folder,
+you can set the following options (be sure to click on the "Set 
+Value" button after typing in the new value):
+
+
+* Destination EMail
+This is the address that automated messages are sent to. This
+can be the administrator account on your company's LAN. It
+could be your ISP email account. It could be a Hotmail account.
+If you are doing something "shady" with Back Orifice, you may
+want to consider using some anonymous remailers and 
+Hotmail-like accounts.
+
+* Mail Server
+This is the mail server to use. It can be fairly tricky to find
+the proper value here. If you are using your ISP email account,
+put the ISP's mail server here (for isntance mail.myprovider.com).
+If you are using a web-based email account, you must put in the
+address of their MAIL SERVER, and not their WEB SERVER. The
+unix-savy can use a tool such as "dig" to perform a DNS query
+for the service's MX record. The rest of you can try to find
+an similar tool for Windows (Good luck! I have yet to find one.
+Although, if you do happen to know of a port of "dig" for
+Windows, PLEASE let me know!) or use any of the following values:
+hotmail.com -> mail.hotmail.com
+yahoo.com -> mx1.yahoo.com
+hushmail.com -> www.hushmail.com
+rocketmail.com -> mta1.rocketmail.com
+altavista.net -> spool.globecomm.net
+angelfire.com -> mta1-mail.angelfire.com
+juno.com -> a.mx.juno.com
+mailcity.com -> mta5-mail.mailcity.com
+At the time of this writing, the above mail servers were 
+correct. I cannot guarantee that they will be correct at any
+later date.
+
+ALSO: Be aware that some mail servers, in an effort to prevent
+spamming will only allow you to send to addresses that exist
+in their mail system. Unless you really know what you are
+doing, be sure that the mail server you use matches up with
+the email address you use.
+
+* Repeat Process
+Disabled: Only one email message will ever be sent out from
+the BO2K'ed machine. (Although you can manually send more
+using the "Debug:Resend Message" command).
+Enabled: A message will be sent each time the BO2K server
+is started. In other words, each time the computer is
+rebooted.
+
+* Message
+A piece of text to send in the notification message. Most
+likely, you will want to use it as a note to youself. It
+will help you remember what computer or BO2K server sent
+the message. You can also use it as a reminder of what
+port and password the server uses. You can type whatever
+the hell you want here.
+
+Usage
+______
+
+
+As soon as Back Orifice 2000 is launched on the remote
+computer, the email action is performed. 
+From the BO2K GUI, you can perform the following
+operations:
+Debug:Show
+Displays the debug log of exactly what is going on with the
+plugin.
+Debug:Clear
+Clears the debug log
+Debug:Resend Message
+This will cause the remote machine to send an email message
+immediately. If you have the remote machine set up to send 
+an email message only once, this will cause the machine to
+"forget" that it has done so. Hence, it will send again until
+successful.
+
+EMail
+_______
+
+
+The email message that gets sent to you contains the 
+following pieces of information:
+* The logged in user's username
+* The computer's name
+* The date/time
+* A custom message (see "Message" above in the configuration
+section)
+* The IP address or addresses that are bound to the computer.
+A maximum of six will be displayed.
+
+ 

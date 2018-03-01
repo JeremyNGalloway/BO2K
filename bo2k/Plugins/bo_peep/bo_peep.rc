@@ -1,0 +1,152 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "include\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "include\\resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VIDSTREAMDLG DIALOG DISCARDABLE  0, 0, 120, 109
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "VidStream Client"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CHECKBOX        "Connect...",IDC_CONNECT,4,88,52,16,BS_PUSHLIKE
+    CONTROL         "Overlay Connection Details",IDC_OVERLAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,76,101,10
+    PUSHBUTTON      "Copy",IDC_COPY,64,88,52,16
+    CONTROL         "",IDC_FRAME,"Static",SS_BLACKFRAME | SS_SUNKEN,8,4,104,
+                    68
+END
+
+IDD_HIJACKDLG DIALOG DISCARDABLE  0, 0, 136, 85
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Console Hijack Client"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CHECKBOX        "Connect...",IDC_CONNECT,4,8,52,16,BS_PUSHLIKE
+    CHECKBOX        "Own Mouse",IDC_OWNMOUSE,64,4,28,24,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_PUSHLIKE
+    CHECKBOX        "Own Keyboard",IDC_OWNKEYBD,96,4,28,24,BS_ICON | 
+                    BS_CENTER | BS_VCENTER | BS_PUSHLIKE
+    CONTROL         "HotKey1",IDC_HOTKEY,"msctls_hotkey32",WS_DISABLED | 
+                    WS_BORDER,56,65,76,15
+    LTEXT           "Machine switch hotkey:",IDC_HOTKEYTEXT,56,57,76,8,
+                    WS_DISABLED | NOT WS_GROUP
+    EDITTEXT        IDC_MOUSETIME,56,41,76,14,ES_NUMBER | WS_DISABLED
+    LTEXT           "Mouse delay (msec):",IDC_MOUSETIMETEXT,56,32,66,8,
+                    WS_DISABLED | NOT WS_GROUP
+    CONTROL         "Settings...",IDC_LOCK,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,4,40,44,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_VIDSTREAMDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_HIJACKDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BO_PEEP             ICON    PRELOAD IMPURE DISCARDABLE "res\\ico00003.ico"
+IDI_MOUSE               ICON    PRELOAD IMPURE DISCARDABLE "res\\icon1.ico"
+IDI_REDMOUSE            ICON    PRELOAD IMPURE DISCARDABLE "res\\ico00001.ico"
+IDI_KEYBOARD            ICON    PRELOAD IMPURE DISCARDABLE "res\\ico00002.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_REMOTEPOINTER       CURSOR  DISCARDABLE     "res\\arrow.cur"
+IDC_INACTIVE            CURSOR  DISCARDABLE     "res\\cursor1.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

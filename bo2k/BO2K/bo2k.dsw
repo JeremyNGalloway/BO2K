@@ -1,0 +1,101 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "bo2k"=.\bo2k.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/bo2k", GXCAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "bo2kcfg"=.\bo2kcfg\bo2kcfg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/bo2k/bo2kcfg", LEDAAAAA
+    .\bo2kcfg
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "bo2kgui"=.\bo2kgui\bo2kgui.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/bo2k/bo2kgui", AFDAAAAA
+    .\bo2kgui
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "bo3des"=.\bo3des\bo3des.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/bo2k/bo3des", ETDAAAAA
+    .\bo3des
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "bo_peep"=.\bo_peep\bo_peep.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/bo2k/bo_peep", EJDAAAAA
+    .\bo_peep
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/bo2k", GXCAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
